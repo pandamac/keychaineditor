@@ -1,0 +1,319 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BA22E55D1BF35CEC00E64357 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA22E55C1BF35CEC00E64357 /* UIKit.framework */; };
+		BA7A38D71B6774A100DE8AFA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA7A38D61B6774A100DE8AFA /* Foundation.framework */; };
+		BA7A38E31B6774A100DE8AFA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BA7A38E21B6774A100DE8AFA /* main.m */; };
+		BA7A38EB1B6774E000DE8AFA /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA7A38EA1B6774E000DE8AFA /* Security.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		BA22E55C1BF35CEC00E64357 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		BA7A38D31B6774A100DE8AFA /* keychaineditor */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = keychaineditor; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA7A38D61B6774A100DE8AFA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		BA7A38DB1B6774A100DE8AFA /* control.txt */ = {isa = PBXFileReference; lastKnownFileType = text; name = control.txt; path = Package/DEBIAN/control.txt; sourceTree = "<group>"; };
+		BA7A38DC1B6774A100DE8AFA /* control */ = {isa = PBXFileReference; lastKnownFileType = text; name = control; path = Package/DEBIAN/control; sourceTree = "<group>"; };
+		BA7A38DE1B6774A100DE8AFA /* PackageVersion.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = PackageVersion.plist; sourceTree = "<group>"; };
+		BA7A38E11B6774A100DE8AFA /* 0xdeadfa11 */ = {isa = PBXFileReference; lastKnownFileType = text; name = 0xdeadfa11; path = Package/usr/bin/0xdeadfa11; sourceTree = "<group>"; };
+		BA7A38E21B6774A100DE8AFA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		BA7A38E41B6774A100DE8AFA /* keychaineditor-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "keychaineditor-Prefix.pch"; sourceTree = "<group>"; };
+		BA7A38EA1B6774E000DE8AFA /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		BA7A38EC1B677ECD00DE8AFA /* entitlements.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = entitlements.xml; path = ../entitlements.xml; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BA7A38D01B6774A100DE8AFA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA22E55D1BF35CEC00E64357 /* UIKit.framework in Frameworks */,
+				BA7A38EB1B6774E000DE8AFA /* Security.framework in Frameworks */,
+				BA7A38D71B6774A100DE8AFA /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BA7A38CA1B6774A100DE8AFA = {
+			isa = PBXGroup;
+			children = (
+				BA7A38EC1B677ECD00DE8AFA /* entitlements.xml */,
+				BA7A38D81B6774A100DE8AFA /* keychaineditor */,
+				BA7A38D51B6774A100DE8AFA /* Frameworks */,
+				BA7A38D41B6774A100DE8AFA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BA7A38D41B6774A100DE8AFA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BA7A38D31B6774A100DE8AFA /* keychaineditor */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BA7A38D51B6774A100DE8AFA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BA22E55C1BF35CEC00E64357 /* UIKit.framework */,
+				BA7A38EA1B6774E000DE8AFA /* Security.framework */,
+				BA7A38D61B6774A100DE8AFA /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BA7A38D81B6774A100DE8AFA /* keychaineditor */ = {
+			isa = PBXGroup;
+			children = (
+				BA7A38E21B6774A100DE8AFA /* main.m */,
+				BA7A38D91B6774A100DE8AFA /* Package */,
+				BA7A38DD1B6774A100DE8AFA /* Supporting Files */,
+			);
+			path = keychaineditor;
+			sourceTree = "<group>";
+		};
+		BA7A38D91B6774A100DE8AFA /* Package */ = {
+			isa = PBXGroup;
+			children = (
+				BA7A38DA1B6774A100DE8AFA /* DEBIAN */,
+				BA7A38DF1B6774A100DE8AFA /* usr */,
+			);
+			name = Package;
+			sourceTree = "<group>";
+		};
+		BA7A38DA1B6774A100DE8AFA /* DEBIAN */ = {
+			isa = PBXGroup;
+			children = (
+				BA7A38DB1B6774A100DE8AFA /* control.txt */,
+				BA7A38DC1B6774A100DE8AFA /* control */,
+			);
+			name = DEBIAN;
+			sourceTree = "<group>";
+		};
+		BA7A38DD1B6774A100DE8AFA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BA7A38DE1B6774A100DE8AFA /* PackageVersion.plist */,
+				BA7A38E41B6774A100DE8AFA /* keychaineditor-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BA7A38DF1B6774A100DE8AFA /* usr */ = {
+			isa = PBXGroup;
+			children = (
+				BA7A38E01B6774A100DE8AFA /* bin */,
+			);
+			name = usr;
+			sourceTree = "<group>";
+		};
+		BA7A38E01B6774A100DE8AFA /* bin */ = {
+			isa = PBXGroup;
+			children = (
+				BA7A38E11B6774A100DE8AFA /* 0xdeadfa11 */,
+			);
+			name = bin;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BA7A38D21B6774A100DE8AFA /* keychaineditor */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BA7A38E71B6774A100DE8AFA /* Build configuration list for PBXNativeTarget "keychaineditor" */;
+			buildPhases = (
+				BA7A38CF1B6774A100DE8AFA /* Sources */,
+				BA7A38D01B6774A100DE8AFA /* Frameworks */,
+				BA7A38D11B6774A100DE8AFA /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = keychaineditor;
+			productName = keychaineditor;
+			productReference = BA7A38D31B6774A100DE8AFA /* keychaineditor */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BA7A38CB1B6774A100DE8AFA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				TargetAttributes = {
+					BA7A38D21B6774A100DE8AFA = {
+						CreatedOnToolsVersion = 6.4;
+					};
+				};
+			};
+			buildConfigurationList = BA7A38CE1B6774A100DE8AFA /* Build configuration list for PBXProject "keychaineditor" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = BA7A38CA1B6774A100DE8AFA;
+			productRefGroup = BA7A38D41B6774A100DE8AFA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BA7A38D21B6774A100DE8AFA /* keychaineditor */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		BA7A38D11B6774A100DE8AFA /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/myfile",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/opt/iOSOpenDev/bin/iosod --xcbp";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BA7A38CF1B6774A100DE8AFA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA7A38E31B6774A100DE8AFA /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		BA7A38E51B6774A100DE8AFA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = "*.nib *.lproj *.gch (*) .DS_Store CVS .svn .git .hg *.xcodeproj *.xcode *.pbproj *.pbxproj";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(iOSOpenDevPath)/frameworks/**",
+					"$(SDKROOT)/System/Library/PrivateFrameworks",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(iOSOpenDevPath)/include/**";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				LIBRARY_SEARCH_PATHS = "$(iOSOpenDevPath)/lib/**";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = NO;
+				iOSOpenDevPath = /opt/iOSOpenDev;
+			};
+			name = Debug;
+		};
+		BA7A38E61B6774A100DE8AFA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = "*.nib *.lproj *.gch (*) .DS_Store CVS .svn .git .hg *.xcodeproj *.xcode *.pbproj *.pbxproj";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(iOSOpenDevPath)/frameworks/**",
+					"$(SDKROOT)/System/Library/PrivateFrameworks",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(iOSOpenDevPath)/include/**";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				LIBRARY_SEARCH_PATHS = "$(iOSOpenDevPath)/lib/**";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				iOSOpenDevPath = /opt/iOSOpenDev;
+			};
+			name = Release;
+		};
+		BA7A38E81B6774A100DE8AFA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "keychaineditor/keychaineditor-Prefix.pch";
+				INSTALL_PATH = /usr/bin;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				iOSOpenDevBuildPackageOnAnyBuild = NO;
+				iOSOpenDevCopyOnBuild = NO;
+				iOSOpenDevDevice = "";
+				iOSOpenDevInstallOnAnyBuild = NO;
+				iOSOpenDevInstallOnProfiling = YES;
+				iOSOpenDevRespringOnInstall = YES;
+				iOSOpenDevUsePackageVersionPList = YES;
+			};
+			name = Debug;
+		};
+		BA7A38E91B6774A100DE8AFA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "keychaineditor/keychaineditor-Prefix.pch";
+				INSTALL_PATH = /usr/bin;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				iOSOpenDevBuildPackageOnAnyBuild = NO;
+				iOSOpenDevCopyOnBuild = NO;
+				iOSOpenDevDevice = "";
+				iOSOpenDevInstallOnAnyBuild = NO;
+				iOSOpenDevInstallOnProfiling = YES;
+				iOSOpenDevRespringOnInstall = YES;
+				iOSOpenDevUsePackageVersionPList = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BA7A38CE1B6774A100DE8AFA /* Build configuration list for PBXProject "keychaineditor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BA7A38E51B6774A100DE8AFA /* Debug */,
+				BA7A38E61B6774A100DE8AFA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BA7A38E71B6774A100DE8AFA /* Build configuration list for PBXNativeTarget "keychaineditor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BA7A38E81B6774A100DE8AFA /* Debug */,
+				BA7A38E91B6774A100DE8AFA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BA7A38CB1B6774A100DE8AFA /* Project object */;
+}
