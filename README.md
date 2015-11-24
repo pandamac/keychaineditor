@@ -40,4 +40,4 @@ the keychain access entitlements.<br/>
 **$ codesign -fs "YOUR_SELF_SIGNED_CERT" --entitlements entitlements.xml keychaineditor**
  * To get a list of certificates that are already available in your keychain to sign your binary, you can use the following command:<br/>
    **$ security find-identity -v -p codesigning**
-Modify by panda
+5. iOS8 or iOS7 some modification is here. by panda<br/>
