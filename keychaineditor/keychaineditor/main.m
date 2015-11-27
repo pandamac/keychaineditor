@@ -86,7 +86,6 @@ BOOL isiOS8()
  */
 
 OSStatus osstatusToHumanReadableString(OSStatus status) {
-    
     switch (status) {
         case errSecSuccess:
             fprintf(stdout, "\e[0;32mOperation successfully completed.\e[0m\n");
@@ -147,7 +146,14 @@ NSString* determineTypeAndReturnNSString(id accountValue) {
     
     // If NSData, convert it to NSString and return...
     if ([accountValue isKindOfClass:[NSData class]]) {
-        return [[NSString alloc] initWithData:accountValue encoding:NSUTF8StringEncoding];
+        NSString * ret = [[NSString alloc] initWithData:accountValue encoding:NSUTF8StringEncoding];
+        if (ret == nil) {
+            ret = [NSString stringWithFormat:@"%s",[accountValue bytes]];
+        }
+        if (ret == nil) {
+            ret = [NSString stringWithFormat:@"base64: %@",[accountValue base64EncodedStringWithOptions:0]];
+        }
+        return ret;
     }
     
     return accountValue;
@@ -288,7 +294,11 @@ void prepareJsonOutput(NSDictionary *results, NSString *find) {
         [innerJSON setObject:determineTypeAndReturnNSString([eachItemFromResults objectForKey:(__bridge id)kSecAttrService])
                       forKey:@"Service"];
         
-        [innerJSON setObject:determineTypeAndReturnNSString([eachItemFromResults objectForKey:(__bridge id)kSecAttrAccount])
+        if (determineTypeAndReturnNSString([eachItemFromResults objectForKey:(__bridge id)kSecAttrAccount]) == nil) {
+            NSLog(@"innerJSON: %@",innerJSON);
+        }
+        else
+            [innerJSON setObject:determineTypeAndReturnNSString([eachItemFromResults objectForKey:(__bridge id)kSecAttrAccount])
                       forKey:@"Account"];
         
         [innerJSON setObject:[NSString stringWithFormat:@"%@", [eachItemFromResults objectForKey:(__bridge id)kSecAttrAccessGroup]]
